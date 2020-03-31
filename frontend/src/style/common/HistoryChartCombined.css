@@ -1,0 +1,42 @@
+.HistoryChartCombined svg text {
+    fill: var(--textColor);
+}
+
+.HistoryChartCombined .label,
+.HistoryChartCombined .valLabel,
+.HistoryChartCombined .trainLabel {
+    fill: var(--textColor);
+    font-size: 11px;
+    text-anchor: end;
+    font-weight: 400;
+}
+
+.HistoryChartCombined .valLabel,
+.HistoryChartCombined .trainLabel {
+    text-anchor: middle;
+}
+
+.HistoryChartCombined path.valLine,
+.HistoryChartCombined path.trainLine {
+    fill: none;
+    opacity: 0.8;
+}
+
+.HistoryChartCombined path.trainConfInterval {
+    opacity: 0.1;
+}
+.HistoryChartCombined path.valConfInterval {
+    opacity: 0.2;
+}
+.HistoryChartCombined path.trainConfInterval:hover,
+.HistoryChartCombined path.valConfInterval:hover {
+    opacity: 0.5;
+}
+
+.HistoryChartCombined .trainLine {
+    stroke-dasharray: 2 4;
+}
+
+.HistoryChartCombined line {
+    shape-rendering: crispEdges;
+}

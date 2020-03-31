@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+}
+
+/* General Elements */
+
+html,
+body {
+    background: #888;
+}
+
+body {
+    min-width: 800px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--textColor);
+}
+
+button, button.btn {
+    box-shadow: none;
+}
+
+a {
+    color: var(--accentColor);
+}
+
+a:hover {
+    color: var(--textColor);
+}
+
+optgroup,
+optgroup:hover,
+option,
+option:hover {
+    background: var(--insideViewButtonBg);
+}
+
+svg text {
+    text-rendering: optimizeLegibility;
+}
+
+/* Scrollbars */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollBarThumbBg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollBarThumbBgHover);
+}
+
+/* Basic App layout */
+
+.App {
+    background: var(--bodyBgColor);
+    color: var(--textColor);
+}
+
+.Main {
+    display: grid;
+    margin-top: 40px;
+}
+
+.ViewContainer {
+    padding: 10px 10px 10px 10px;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.ViewContainer.secondView {
+    border-left: 5px solid var(--controlBarBg);
+}
+
+.DetailsPanel {
+    text-align: center;
+    width: 90%;
+    padding: 10px 5% 10px 5%;
+    background: var(--detailsBgColor);
+    overflow: auto;
+}
+
+.DetailsPanel h2 {
+    margin: 0;
+    color: var(--accentColor);
+    font-size: 18px;
+}
+
+.DetailsPanel h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.DetailsPanel .Details table {
+    width: 95%;
+}
+
+.DetailsPanel .Details td,
+.DetailsPanel .Details th {
+    width: 50%;
+    padding: 0 3px;
+}
+
+.DetailsPanel .Details td:first-child,
+.DetailsPanel .Details th:first-child {
+    text-align: right;
+    color: var(--accentColor);
+}
+
+.DetailsPanel .Details td:nth-child(2),
+.DetailsPanel .Details th:nth-child(2) {
+    text-align: left;
+}
+
+.awaitingData {
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Common Elements */
+
+.infoMessage {
+    padding: 2px 4px;
+    border: 1px solid #888;
+    border-radius: 2px;
+    background: rgba(70, 131, 180, 0.33);
+}
+
+.svg-inline--fa {
+    margin-right: 5px;
+}
+
+.Main button,
+.Settings button,
+.Main select,
+.Settings select {
+    margin: 3px;
+    padding: 3px 5px;
+    height: 28px;
+    border: none;
+    background: var(--insideViewButtonBg);
+    color: var(--textColor);
+    font-size: 13px;
+    text-align: center;
+}
+
+.Main button:disabled,
+.Settings button:disabled,
+.Main select:disabled,
+.Settings select:disabled {
+    opacity: 0.5;
+}
+
+.Main select {
+    width: 90%;
+    max-width: 400px;
+}
+
+.Main button:hover,
+.Settings button:hover,
+.Main select:hover,
+.Settings select:hover {
+    background: var(--controlBarButtonBgHover);
+}

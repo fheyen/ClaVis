@@ -1,0 +1,60 @@
+.ClassifierSummary {
+    height: 100%;
+    padding: 0 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ClassifierSummary h2,
+.ClassifierSummary h3 {
+    color: var(--textColor);
+    margin: 0;
+}
+
+.ClassifierSummary h2 {
+    font-size: 18px;
+}
+
+.ClassifierSummary h3 {
+    font-size: 14px;
+}
+
+/* Tables */
+
+.ClassifierSummary table {
+    width: 90%;
+}
+
+.ClassifierSummary .scoretable td,
+.ClassifierSummary .scoretable th {
+    padding: 0 3px;
+    width: 33%;
+    text-align: center;
+}
+
+.ClassifierSummary .paramTable td,
+.ClassifierSummary .paramTable th {
+    padding: 0 3px;
+    width: 50%;
+}
+
+.ClassifierSummary td:first-child,
+.ClassifierSummary th:first-child {
+    text-align: right;
+    color: var(--accentColor);
+}
+
+.ClassifierSummary .paramTable td:nth-child(2),
+.ClassifierSummary .paramTable th:nth-child(2) {
+    text-align: left;
+}
+
+/* Other */
+
+.ClassifierSummary h3 button {
+    background: none;
+}
+
+.ClassifierSummary .svg-inline--fa {
+    color: var(--accentColor);
+}

@@ -1,0 +1,33 @@
+.Ranking .control {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 5px;
+}
+
+.Ranking svg {
+    font-size: 12px;
+}
+
+.Ranking text {
+    font-weight: 600;
+}
+
+.Ranking .labels text,
+.Ranking .legend text {
+    text-anchor: middle;
+}
+
+.Ranking .legend text {
+    fill: var(--textColor);
+}
+
+.Ranking path {
+    stroke: var(--pathStroke);
+    fill: none;
+    shape-rendering: geometricPrecision;
+}
+
+.Ranking .row.aggregated {
+    cursor: pointer;
+    text-decoration: underline;
+}

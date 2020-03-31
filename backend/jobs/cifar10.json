@@ -1,0 +1,155 @@
+{
+    "data": {
+        "title": "Cifar 10",
+        "dataset": "keras_cifar10",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 0
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 0
+        },
+        {
+            "title": "t-SNE p50",
+            "method": "tsne",
+            "perplexity": 50.0,
+            "random_state": 0
+        },
+        {
+            "title": "UMAP euclidean nn10",
+            "method": "umap",
+            "metric": "euclidean",
+            "min_dist": 0.001,
+            "spread": 1.0,
+            "n_neighbors": 10,
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "🟊 Optimal",
+            "method": "optimal"
+        },
+        {
+            "title": "Ⓝ Naive",
+            "method": "naive"
+        },
+        {
+            "title": "Pretrained b16",
+            "method": "cifar10_cnn_pretrained",
+            "model_file": "./modules/classifiers/cifar10_cnn_pretrained/C CNN b16 aug_True.h5"
+        },
+        {
+            "title": "Pretrained b32",
+            "method": "cifar10_cnn_pretrained",
+            "model_file": "./modules/classifiers/cifar10_cnn_pretrained/C CNN b32 aug_True.h5"
+        },
+        {
+            "title": "Finetuned b32",
+            "method": "cifar10_cnn_finetuned",
+            "model_file": "./modules/classifiers/cifar10_cnn_pretrained/C CNN b32 aug_True.h5",
+            "save_model": false,
+            "data_augmentation": false,
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 20,
+            "steps_per_epoch": 1000,
+            "batch_size": 32,
+            "random_state": 42
+        },
+        {
+            "title": "M CNN test",
+            "method": "mnist_cnn",
+            "save_model": false,
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 2,
+            "steps_per_epoch": 100,
+            "batch_size": 32,
+            "random_state": 0
+        },
+        {
+            "title": "C CNN test",
+            "method": "cifar10_cnn",
+            "save_model": false,
+            "data_augmentation": false,
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 2,
+            "steps_per_epoch": 100,
+            "batch_size": 32,
+            "random_state": 42
+        },
+        {
+            "title": "M CNN long history",
+            "method": "mnist_cnn",
+            "save_model": true,
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 1000,
+            "steps_per_epoch": 50,
+            "batch_size": 32,
+            "random_state": 42
+        },
+        {
+            "title": "C CNN long history",
+            "method": "cifar10_cnn",
+            "save_model": true,
+            "data_augmentation": false,
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 1000,
+            "steps_per_epoch": 50,
+            "batch_size": 32,
+            "random_state": 42
+        },
+        {
+            "title": "M CNN b{batch_size}",
+            "method": "mnist_cnn",
+            "save_model": false,
+            "early_stopping": true,
+            "early_stopping_patience": 10,
+            "epochs": 100,
+            "steps_per_epoch": 1000,
+            "batch_size": {
+                "is_meta": true,
+                "values": [
+                    16,
+                    32,
+                    64
+                ]
+            },
+            "random_state": 0
+        },
+        {
+            "title": "C CNN b{batch_size} aug_{data_augmentation}",
+            "method": "cifar10_cnn",
+            "save_model": true,
+            "data_augmentation": {
+                "is_meta": true,
+                "values": [
+                    true,
+                    false
+                ]
+            },
+            "early_stopping": false,
+            "early_stopping_patience": 10,
+            "epochs": 100,
+            "steps_per_epoch": 1000,
+            "batch_size": {
+                "is_meta": true,
+                "values": [
+                    16,
+                    32,
+                    64
+                ]
+            },
+            "random_state": 42
+        }
+    ]
+}

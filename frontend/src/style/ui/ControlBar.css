@@ -1,0 +1,84 @@
+.ControlBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    background: var(--controlBarBg);
+    z-index: 1000;
+}
+
+.ControlBar > span {
+    margin: 0 6px;
+}
+
+.ControlBar button,
+.ControlBar select,
+.ControlBar input[type=number] {
+    margin: 0;
+    padding: 0 6px;
+    max-width: 120px;
+    height: 30px;
+    border: 1px solid var(--controlBarBg);
+    border-radius: 0;
+    background: var(--controlBarButtonBg);
+    color: var(--controlBarButtonColor);
+    font-size: 14px;
+    text-align: center;
+    box-shadow: none;
+    /* Fix Firefox' and Safari's own styles */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.ControlBar input[type=number] {
+    padding: 0px;
+    width: 50px;
+    height: 28px;
+}
+
+.ControlBar button:disabled,
+.ControlBar select:disabled {
+    background: var(--controlBarButtonBg);
+    color: var(--controlBarButtonColor);
+}
+
+.ControlBar select {
+    margin-left: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ControlBar select option,
+.ControlBar select option:hover,
+.ControlBar select optgroup,
+.ControlBar select optgroup:hover {
+    color: white;
+    background: var(--controlBarButtonBgHover);
+}
+
+.ControlBar select option:hover {
+    background: var(--accentColor);
+}
+
+.ControlBar button:hover,
+.ControlBar select:hover,
+.ControlBar input[type=number]:hover {
+    color: white;
+    background: var(--controlBarButtonBgHover);
+}
+
+.ControlBar button:hover:disabled {
+    background: var(--controlBarButtonBg);
+}
+
+.ControlBar button.current {
+    background: var(--accentColor);
+    color: white;
+}
+
+.ControlBar .svg-inline--fa {
+    margin: 0 4px;
+}

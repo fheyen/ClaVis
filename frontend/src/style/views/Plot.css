@@ -1,0 +1,89 @@
+.Plot .main {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.Plot .main > div {
+    text-align: center;
+}
+
+.Plot .dot {
+    stroke: var(--circleStroke);
+}
+
+.Plot .axisLabel {
+    fill: var(--labelColor);
+    font-size: 12px;
+    text-anchor: end;
+    font-weight: 400;
+}
+
+.Plot .dataLabel {
+    fill: var(--labelColor);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.Plot line {
+    shape-rendering: crispEdges;
+}
+
+.Plot form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    text-align: center;
+}
+
+.Plot .correlationLegend span {
+    margin: 2px;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.Plot .SPLOM rect {
+    cursor: pointer;
+    stroke-width: 2px;
+}
+
+.Plot .SPLOM text {
+    font-size: 11px;
+}
+
+.Plot .paramLabel,
+.Plot .scoreLabel {
+    fill: var(--labelColor);
+    text-anchor: end;
+}
+
+.Plot .scoreLabel {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.Plot .legend {
+    text-align: center;
+}
+
+.Plot table {
+    width: 100%;
+}
+
+.Plot .legend tr:nth-child(2n+1){
+    background: var(--tableRowBg);
+}
+
+.Plot .legend td:first-child {
+    color: var(--accentColor);
+    text-align: right;
+    font-weight: 500;
+}
+
+.Plot .legend td {
+    padding: 3px;
+}
+
+.Plot .hiddenParamsList {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #888;
+}

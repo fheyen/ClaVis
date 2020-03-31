@@ -1,0 +1,59 @@
+{
+    "data": {
+        "title": "[Test] Multi-label",
+        "dataset": "multi_label_test",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.4,
+        "scale": false,
+        "random_state": 42
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "🟊 Optimal",
+            "method": "optimal_multi_label"
+        },
+        {
+            "title": "SVM {kernel} {C}",
+            "method": "svm_multi_label",
+            "kernel": {
+                "is_meta": true,
+                "values": [
+                    "rbf",
+                    "poly",
+                    "linear"
+                ]
+            },
+            "degree": 3,
+            "C": {
+                "is_meta": true,
+                "values": [
+                    0.01,
+                    0.1,
+                    1.0
+                ]
+            },
+            "random_state": 42
+        },
+        {
+            "title": "RF {n_estimators}",
+            "method": "random_forest_multi_label",
+            "n_estimators": {
+                "is_meta": true,
+                "values": [
+                    25,
+                    50,
+                    100
+                ]
+            },
+            "random_state": 42
+        }
+    ]
+}

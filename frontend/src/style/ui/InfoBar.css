@@ -1,0 +1,34 @@
+.InfoBar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background: var(--infoBarBg);
+    font-size: 14px;
+}
+
+.InfoBar > div {
+    display: inline;
+    padding: 0 10px 0;
+}
+
+.InfoBar .helpText {
+    display: inline-block;
+    padding-top: 6px;
+}
+
+.InfoBar .accent {
+    color: var(--infoBarAccentColor);
+    font-weight: 500;
+}
+
+.InfoBar button {
+    border: none;
+    background: none;
+    color: var(--textColor);
+}
+
+.InfoBar .ColorMapLegend {
+    position: relative;
+    top: 5px;
+}

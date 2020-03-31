@@ -1,0 +1,113 @@
+.Comparison {
+    display: grid;
+    grid-template-columns: 250px auto auto;
+}
+
+.Comparison .juxtaposition {
+    padding: 0 10px;
+    margin: 0 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content min-content;
+    border-left: 1px solid var(--separatorLineColor);
+    border-right: 1px solid var(--separatorLineColor);
+}
+
+.Comparison ul li {
+    padding: 2px 5px;
+    list-style-type: none;
+    margin-left: -25px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Comparison ul li.selected {
+    background: var(--listItemSelectedBg);
+}
+
+.Comparison ul li.highlighted,
+.Comparison ul li.selected.highlighted {
+    background: var(--accentColor);
+    color: white !important;
+}
+
+.Comparison .Comparison {
+    background: none;
+}
+
+.Comparison .accent {
+    color: var(--accentColor);
+}
+
+.Comparison .comparison {
+    text-align: center;
+}
+
+.Comparison h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.Comparison .comparison h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.Comparison table {
+    width: 100%;
+}
+
+.Comparison tr:nth-child(2n) {
+    background: var(--tableRowBg);
+}
+
+.Comparison td,
+.Comparison th {
+    padding: 0 3px;
+    text-align: center;
+    width: 30%;
+}
+
+.Comparison td:first-child,
+.Comparison th:first-child {
+    text-align: right;
+    color: var(--accentColor);
+}
+
+.Comparison .trueClassLabel,
+.Comparison .predClassLabel {
+    fill: var(--textColor);
+    text-anchor: middle;
+}
+
+.Comparison .trueClassLabel {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.Comparison .toggleDiagonalBtn {
+    cursor: pointer;
+}
+
+.Comparison .toggleDiagonalBtn rect {
+    fill: rgba(128, 128, 128, 0.5);
+}
+
+.Comparison .toggleDiagonalBtn line {
+    stroke: var(--accentColor);
+    stroke-width: 2;
+}
+
+.Comparison .colorLegend span {
+    margin: 5px 2px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 0.8em;
+}
+
+.Comparison .svg-inline--fa {
+    color: var(--accentColor);
+}

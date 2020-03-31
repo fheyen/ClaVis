@@ -1,0 +1,23 @@
+.ClassifierMap {
+    text-align: center;
+}
+
+.ClassifierMap .Map circle {
+    stroke: var(--circleStroke);
+}
+
+.ClassifierMap .Map text {
+    fill: var(--textColor);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.ClassifierMap .control {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+}
+
+.ClassifierMap .checkbox {
+    text-align: left;
+}

@@ -1,0 +1,109 @@
+.dark {
+    /* Common */
+    --textColor: #eee;
+    --accentColor: steelblue;
+    --accentColor2: #004c99;
+    --bodyBgColor:#111;
+    --detailsBgColor: #222;
+    --listItemBorderColor: #555;
+    --listItemSelectedBg: #383838;
+    --separatorLineColor: #555;
+    --insideViewButtonBg: #444;
+    --tableRowBg: #222;
+
+    /* Scroll Bars */
+    --scrollBarTrackBg: rgba(128, 128, 128, 0.25);
+    --scrollBarThumbBg: #666;
+    --scrollBarThumbBgHover: #aaa;
+
+    /* Control Bar */
+    --controlBarBg: #333;
+    --controlBarButtonColor: #eee;
+    --controlBarButtonBg: #555;
+    --controlBarButtonBgHover: #888;
+
+    /* Info Bar */
+    --infoBarBg: var(--controlBarBg);
+    --infoBarButtonBorderColor: #555;
+    --infoBarButtonBorderColorHover: white;
+    --infoBarAccentColor: rgb(70, 154, 180);
+
+    /* Menu */
+    --startButtonBgHover: rgb(85, 183, 240);
+
+    /* Ranking */
+    --pathStroke: rgba(255, 255, 255, 0.5);
+
+    /* Map */
+    --circleStroke: white;
+    --lineStroke: rgba(255, 255, 255, 0.025);
+    --lineStrokeHighlighted: rgba(255, 255, 255, 0.1);
+    --lineStrokeFaded: rgba(255, 255, 255, 0.01);
+
+    /* Plot */
+    --labelColor: white;
+
+    /* Data Info */
+    --tableRowSeparatorColor: #181818;
+
+    /* History */
+    --trainLineStroke: #bbb;
+
+    /* Scatterplot */
+    --scatterPlotBg: none;
+}
+
+.bright {
+    /* Common */
+    --textColor: #282828;
+    --accentColor: steelblue;
+    --accentColor2: #004c99;
+    --bodyBgColor:#fff;
+    --detailsBgColor: #f0f0f0;
+    --listItemBorderColor: #aaa;
+    --listItemSelectedBg: #ddd;
+    --separatorLineColor: #aaa;
+    --insideViewButtonBg: #ddd;
+    --tableRowBg: #eee;
+
+    /* Scroll Bars */
+    --scrollBarTrackBg: rgba(65, 65, 65, 0.25);
+    --scrollBarThumbBg: #aaa;
+    --scrollBarThumbBgHover: #666;
+
+    /* Control Bar */
+    --controlBarBg: #d8d8d8;
+    --controlBarButtonColor: #666;
+    --controlBarButtonBg: #fff;
+    --controlBarButtonBgHover: #888;
+
+    /* Info Bar */
+    --infoBarBg: var(--controlBarBg);
+    --infoBarButtonBorderColor: #555;
+    --infoBarButtonBorderColorHover: black;
+    --infoBarAccentColor: rgb(7, 115, 148);
+
+    /* Menu */
+    --startButtonBgHover: rgb(85, 183, 240);
+
+    /* Ranking */
+    --pathStroke: rgba(0, 0, 0, 0.5);
+
+    /* Map */
+    --circleStroke: black;
+    --lineStroke: rgba(0, 0, 0, 0.025);
+    --lineStrokeHighlighted: rgba(0, 0, 0, 0.1);
+    --lineStrokeFaded: rgba(0, 0, 0, 0.01);
+
+    /* Plot */
+    --labelColor: black;
+
+    /* Data Info */
+    --tableRowSeparatorColor: #d8d8d8;
+
+    /* History */
+    --trainLineStroke: #666;
+
+    /* Scatterplot */
+    --scatterPlotBg: white;
+}

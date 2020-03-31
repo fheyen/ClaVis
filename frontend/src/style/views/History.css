@@ -1,0 +1,18 @@
+.History .clfIndicator {
+    margin: 1px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 2px;
+}
+
+.History .control {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 5px;
+}
+
+.History h4 {
+    text-align: center;
+}

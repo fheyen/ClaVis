@@ -1,0 +1,90 @@
+{
+    "data": {
+        "title": "Reuters",
+        "dataset": "keras_reuters",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 0
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 0
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "🟊 Optimal",
+            "method": "optimal"
+        },
+        {
+            "title": "Ⓝ Naive",
+            "method": "naive"
+        },
+        {
+            "title": "CNN-LSTM bs{batch_size} lr{learning_rate}",
+            "method": "lstm_cnn",
+            "save_model": false,
+            "epochs": 20,
+            "early_stopping": false,
+            "early_stopping_patience": 20,
+            "batch_size": {
+                "is_meta": true,
+                "values": [
+                    16,
+                    32,
+                    64,
+                    128
+                ]
+            },
+            "learning_rate": {
+                "is_meta": true,
+                "values": [
+                    0.0001,
+                    0.0005,
+                    0.001,
+                    0.005,
+                    0.01
+                ]
+            },
+            "embedding_vector_length": 128,
+            "dropout": 0.25,
+            "layer_size": 100,
+            "random_state": 13
+        },
+        {
+            "title": "LSTM bs{batch_size} lr{learning_rate}",
+            "method": "lstm",
+            "save_model": false,
+            "epochs": 20,
+            "early_stopping": false,
+            "early_stopping_patience": 20,
+            "batch_size": {
+                "is_meta": true,
+                "values": [
+                    16,
+                    32,
+                    64,
+                    128
+                ]
+            },
+            "learning_rate": {
+                "is_meta": true,
+                "values": [
+                    0.0001,
+                    0.0005,
+                    0.001,
+                    0.005,
+                    0.01
+                ]
+            },
+            "embedding_vector_length": 128,
+            "dropout": 0.5,
+            "layer_size": 100,
+            "random_state": 13
+        }
+    ]
+}

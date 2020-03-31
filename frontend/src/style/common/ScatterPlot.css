@@ -1,0 +1,17 @@
+.ScatterPlot {
+    position: relative;
+    display: inline-block;
+    background: var(--scatterPlotBg);
+}
+
+.ScatterPlot svg,
+.ScatterPlot canvas,
+.ScatterPlot .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ScatterPlot .highlightCanvas {
+    pointer-events: none;
+}

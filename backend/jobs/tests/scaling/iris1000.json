@@ -1,0 +1,236 @@
+{
+    "data": {
+        "title": "IRIS 1000",
+        "dataset": "sklearn_iris",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 42
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "🟊 Optimal",
+            "method": "optimal"
+        },
+        {
+            "title": "Ⓝ Naive",
+            "method": "naive"
+        },
+        {
+            "title": "SVM {kernel} rs{random_state}",
+            "method": "svm",
+            "kernel": {
+                "is_meta": true,
+                "values": [
+                    "rbf",
+                    "poly",
+                    "linear"
+                ]
+            },
+            "degree": {
+                "is_meta": true,
+                "values": [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "C": 1.0,
+            "random_state": {
+                "is_meta": true,
+                "min": 1,
+                "max": 10,
+                "step": {
+                    "type": "add",
+                    "value": 1
+                }
+            }
+        },
+        {
+            "title": "RF {n_estimators}",
+            "method": "randomforest",
+            "n_estimators": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    5,
+                    25,
+                    50,
+                    100,
+                    200,
+                    300,
+                    500,
+                    1000,
+                    2000
+                ]
+            },
+            "random_state": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "title": "MLPC {hidden_layer_sizes_short} d{dropout} {activation} {optimizer} bs{batch_size}",
+            "method": "mlpc_keras",
+            "hidden_layer_sizes_short": {
+                "is_meta": true,
+                "values": [
+                    "1x50",
+                    "2x50",
+                    "3x50",
+                    "4x50",
+                    "2x100",
+                    "3x100",
+                    "4x100",
+                    "2x200",
+                    "3x200",
+                    "4x200",
+                    "2x300",
+                    "3x300",
+                    "4x300"
+                ]
+            },
+            "activation": {
+                "is_meta": true,
+                "values": [
+                    "relu",
+                    "tanh"
+                ]
+            },
+            "dropout": {
+                "is_meta": true,
+                "values": [
+                    0.1,
+                    0.3,
+                    0.5,
+                    0.7,
+                    0.9
+                ]
+            },
+            "optimizer": {
+                "is_meta": true,
+                "values": [
+                    "adam",
+                    "sgd"
+                ]
+            },
+            "learning_rate_init": 0.001,
+            "epochs": 200,
+            "early_stopping": true,
+            "batch_size": {
+                "is_meta": true,
+                "values": [
+                    32,
+                    64,
+                    128
+                ]
+            },
+            "random_state": 42,
+            "save_model": false,
+            "verbose": 0
+        },
+        {
+            "title": "Decision Tree rs{random_state}",
+            "method": "decisiontree",
+            "random_state": {
+                "is_meta": true,
+                "min": 1,
+                "max": 50,
+                "step": {
+                    "type": "add",
+                    "value": 1
+                }
+            }
+        },
+        {
+            "title": "GNB",
+            "method": "gaussiannb"
+        },
+        {
+            "title": "GP rs{random_state}",
+            "method": "gaussianprocess",
+            "random_state": {
+                "is_meta": true,
+                "min": 1,
+                "max": 15,
+                "step": {
+                    "type": "add",
+                    "value": 1
+                }
+            }
+        },
+        {
+            "title": "QDA",
+            "method": "qda"
+        },
+        {
+            "title": "QDA 2",
+            "method": "qda"
+        },
+        {
+            "title": "QDA 3",
+            "method": "qda"
+        },
+        {
+            "title": "KNN {n_neighbors}",
+            "method": "kneighbors",
+            "n_neighbors": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    24,
+                    32,
+                    40,
+                    48,
+                    56,
+                    64
+                ]
+            }
+        },
+        {
+            "title": "Ada {n_estimators}",
+            "method": "adaboost",
+            "n_estimators": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    5,
+                    25,
+                    50,
+                    100,
+                    200,
+                    500,
+                    1000
+                ]
+            },
+            "random_state": 42
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+.DataInfo {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.DataInfo .accent {
+    color: var(--accentColor);
+}
+
+.DataInfo .info {
+    width: 300px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.DataInfo .scp {
+    height: 90%;
+}
+
+.DataInfo .classDistribution rect {
+    cursor: pointer;
+}
+
+.DataInfo table {
+    margin: 5%;
+    width: 90%;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    font-size: 11px;
+}
+
+.DataInfo tr {
+    margin: 3px;
+    cursor: pointer;
+}
+
+.DataInfo td {
+    border-top: 2px solid var(--tableRowSeparatorColor);
+}
+
+.DataInfo td,
+.DataInfo th {
+    padding: 1px;
+}
+
+.DataInfo button {
+    margin: 3px;
+    padding: 3px 5px;
+    height: 28px;
+    border: none;
+    background: var(--insideViewButtonBg);
+    color: var(--textColor);
+    font-size: 13px;
+    text-align: center;
+}

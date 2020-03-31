@@ -1,0 +1,70 @@
+{
+    "data": {
+        "title": "[Test] ArgCheck",
+        "dataset": "sklearn_iris",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 42
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "All params ok",
+            "method": "adaboost",
+            "n_estimators": 50,
+            "random_state": 42
+        },
+        {
+            "title": "No random_state",
+            "method": "adaboost",
+            "n_estimators": 50
+        },
+        {
+            "title": "Invalid random_state type",
+            "method": "adaboost",
+            "n_estimators": 50,
+            "random_state": "42"
+        },
+        {
+            "title": "Invalid random_state range",
+            "method": "adaboost",
+            "n_estimators": 50,
+            "random_state": -1
+        },
+        {
+            "title": "String in range",
+            "method": "svm",
+            "kernel": "rbf",
+            "degree": 3,
+            "C": 1.0,
+            "random_state": 42
+        },
+        {
+            "title": "String out of range",
+            "method": "svm",
+            "kernel": "invalid_kernel",
+            "degree": 3,
+            "C": 1.0,
+            "random_state": 42
+        },
+        {
+            "title": "Argument type array",
+            "method": "mlpc",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "solver": "adam",
+            "activation": "relu",
+            "random_state": 42
+        }
+    ]
+}

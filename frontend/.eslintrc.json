@@ -1,0 +1,57 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "classes": true,
+            "arrowFunctions": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "modules": true,
+            "spread": true,
+            "templateStrings": true,
+            "unicodeCodePointEscapes": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "comma-dangle": "warn",
+        "curly": "warn",
+        "eqeqeq": "warn",
+        "new-cap": "warn",
+        "new-parens": "warn",
+        "no-dupe-args": "warn",
+        "no-dupe-keys": "warn",
+        "no-eq-null": "warn",
+        "no-floating-decimal": "warn",
+        "no-inline-comments": "warn",
+        "no-inner-declarations": "warn",
+        "no-invalid-this": "warn",
+        "no-octal": "warn",
+        "no-shadow": "warn",
+        "no-shadow-restricted-names": "warn",
+        "no-use-before-define": "off",
+        "no-var": "warn",
+        "one-var-declaration-per-line": "warn",
+        "prefer-const": "warn",
+        "prefer-template": "warn",
+        "Require-jsdoc": "off",
+        "semi": "warn",
+        "spaced-comment": "warn",
+        "strict": "warn",
+        "use-isnan": "warn",
+        "valid-jsdoc": "off"
+    }
+}

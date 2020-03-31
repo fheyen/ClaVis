@@ -1,0 +1,9 @@
+.ScoreBar {
+    width: 99%;
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.ScoreBar .bar {
+    height: 2px;
+    background: green;
+}

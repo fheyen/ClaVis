@@ -1,0 +1,192 @@
+{
+    "data": {
+        "title": "BreastCancer",
+        "dataset": "sklearn_breast_cancer",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 42
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 42
+        },
+        {
+            "title": "MDS",
+            "method": "mds",
+            "random_state": 42
+        },
+        {
+            "title": "Spectral Embedding",
+            "method": "spectral_embedding",
+            "random_state": 42
+        },
+        {
+            "title": "t-SNE p{perplexity}",
+            "method": "tsne",
+            "perplexity": {
+                "is_meta": true,
+                "values": [
+                    10,
+                    20,
+                    30,
+                    40
+                ]
+            },
+            "random_state": 42
+        },
+        {
+            "title": "LLE {lle_method}",
+            "method": "lle",
+            "n_neighbors": 10,
+            "lle_method": {
+                "is_meta": true,
+                "values": [
+                    "standard",
+                    "ltsa",
+                    "modified"
+                ]
+            },
+            "random_state": 42
+        },
+        {
+            "title": "ISOMAP",
+            "method": "isomap",
+            "n_neighbors": 10,
+            "random_state": 42
+        },
+        {
+            "title": "UMAP euclidean",
+            "method": "umap",
+            "metric": "euclidean",
+            "min_dist": 0.001,
+            "spread": 1.0,
+            "n_neighbors": 10,
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "🟊 Optimal",
+            "method": "optimal"
+        },
+        {
+            "title": "Ⓝ Naive",
+            "method": "naive"
+        },
+        {
+            "title": "SVM {kernel}",
+            "method": "svm",
+            "kernel": {
+                "is_meta": true,
+                "values": [
+                    "rbf",
+                    "linear"
+                ]
+            },
+            "degree": 3,
+            "C": 1.0,
+            "random_state": 42
+        },
+        {
+            "title": "RF {n_estimators}",
+            "method": "randomforest",
+            "n_estimators": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    25,
+                    50,
+                    100,
+                    200,
+                    500
+                ]
+            },
+            "random_state": 42
+        },
+        {
+            "title": "MLP {hidden_layer_sizes_short}",
+            "method": "mlpc_keras",
+            "hidden_layer_sizes_short": {
+                "is_meta": true,
+                "values": [
+                    "2x50",
+                    "2x100",
+                    "2x200",
+                    "2x500",
+                    "3x50",
+                    "3x100",
+                    "3x200"
+                ]
+            },
+            "activation": "relu",
+            "dropout": 0.5,
+            "optimizer": "adam",
+            "learning_rate_init": 0.001,
+            "epochs": 300,
+            "early_stopping": true,
+            "early_stopping_patience": 30,
+            "batch_size": 64,
+            "random_state": 42,
+            "save_model": false
+        },
+        {
+            "title": "Decision Tree",
+            "method": "decisiontree",
+            "random_state": 42
+        },
+        {
+            "title": "GNB",
+            "method": "gaussiannb",
+            "random_state": 42
+        },
+        {
+            "title": "GP",
+            "method": "gaussianprocess",
+            "random_state": 42
+        },
+        {
+            "title": "QDA",
+            "method": "qda",
+            "random_state": 42
+        },
+        {
+            "title": "KNN {n_neighbors}",
+            "method": "kneighbors",
+            "n_neighbors": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    8,
+                    10,
+                    16,
+                    32
+                ]
+            },
+            "random_state": 42
+        },
+        {
+            "title": "Ada {n_estimators}",
+            "method": "adaboost",
+            "n_estimators": {
+                "is_meta": true,
+                "values": [
+                    1,
+                    25,
+                    50,
+                    100,
+                    200,
+                    500
+                ]
+            },
+            "random_state": 42
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "data": {
+        "title": "Auto-tune",
+        "dataset": "sklearn_breast_cancer",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.8,
+        "scale": false,
+        "random_state": 42,
+        "tuning_rounds": 3,
+        "tuning_population": 10,
+        "tuning_offspring": 5
+    },
+    "classifiers": [
+        {
+            "title": "SVM {kernel} {C}",
+            "method": "svm",
+            "kernel": {
+                "tune": true,
+                "type": "categorical",
+                "values": [
+                    "linear",
+                    "rbf"
+                ],
+                "initial": "rbf"
+            },
+            "degree": 3,
+            "C": {
+                "tune": true,
+                "type": "float",
+                "min": 0.001,
+                "max": 10,
+                "initial": 1,
+                "sigma": 2
+            },
+            "random_state": 42
+        },
+        {
+            "title": "RF {n_estimators}",
+            "method": "randomforest",
+            "n_estimators": {
+                "tune": true,
+                "type": "int",
+                "min": 1,
+                "max": 200,
+                "initial": 50,
+                "sigma": 20
+            },
+            "random_state": 42
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "data": {
+        "title": "[Test] Keras MLPC",
+        "dataset": "sklearn_iris",
+        "subset_train": 1,
+        "subset_test": 1,
+        "test_size": 0.2,
+        "scale": false,
+        "random_state": 42
+    },
+    "projections": [
+        {
+            "title": "PCA",
+            "method": "pca",
+            "random_state": 42
+        }
+    ],
+    "classifiers": [
+        {
+            "title": "Keras MLPC {hidden_layer_sizes_short}",
+            "method": "mlpc_keras",
+            "hidden_layer_sizes_short": {
+                "is_meta": true,
+                "values": [
+                    "2x100",
+                    "4x100",
+                    "6x100",
+                    "8x100"
+                ]
+            },
+            "activation": "relu",
+            "dropout": 0.5,
+            "optimizer": "adam",
+            "learning_rate_init": 0.001,
+            "epochs": 1000,
+            "batch_size": 64,
+            "random_state": 42,
+            "save_model": true
+        },
+        {
+            "title": "Keras MLPC 2x100 pretrained",
+            "method": "mlpc_keras_pretrained",
+            "model_file": "./saved_models/sklearn_iris/Keras MLPC 2x100.h5"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+.HistoryChart svg text {
+    fill: var(--textColor);
+}
+
+.HistoryChart .label,
+.HistoryChart .valLabel,
+.HistoryChart .trainLabel {
+    fill: var(--textColor);
+    font-size: 11px;
+    text-anchor: end;
+    font-weight: 400;
+}
+
+.HistoryChart .valLabel,
+.HistoryChart .trainLabel  {
+    text-anchor: middle;
+}
+
+.HistoryChart path {
+    fill: none;
+    stroke-width: 1;
+}
+
+.HistoryChart .valLine  {
+    stroke: var(--accentColor);
+}
+
+.HistoryChart .trainLine  {
+    stroke: var(--trainLineStroke);
+    stroke-dasharray: 2 4;
+}
+
+.HistoryChart line {
+    shape-rendering: crispEdges;
+}

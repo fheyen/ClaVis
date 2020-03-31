@@ -1,0 +1,108 @@
+.Help {
+    padding: 20px 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 5%;
+}
+
+@media (min-width: 1000px) {
+    .Help {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 2000px) {
+    .Help {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.Help h2 {
+    border-bottom: 1px solid var(--accentColor);
+}
+
+.Help code {
+    background: rgba(128, 128, 128, 0.4);
+    border-color: #888;
+    color: var(--textColor);
+}
+
+.Help a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Help > div > p > button,
+.Help > div > p > button:hover {
+    color: var(--accentColor);
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Help .svg-inline--fa,
+.HelpDetails .svg-inline--fa {
+    margin: 0;
+    color: var(--accentColor);
+}
+
+.Help li {
+    margin-left: -10px;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.Help li.hoverable:hover {
+    background: var(--accentColor);
+    color: white;
+}
+
+.Help li.hoverable:hover .accent {
+    color: white;
+}
+
+.Help .accent,
+.HelpDetails .accent {
+    color: var(--accentColor);
+    font-weight: 500;
+}
+
+.Help .badge {
+    margin-left: 2px;
+    padding: 1px 4px;
+    background: var(--accentColor);
+    color: white;
+    border: 1px solid var(--bodyBgColor);
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.HelpDetails {
+    text-align: left;
+}
+
+.HelpDetails li {
+    list-style-type: none;
+}
+
+.HelpDetails > ul > li {
+    margin-bottom: 5px;
+}
+
+.HelpDetails .svg-inline--fa {
+    width: 20px;
+}
+
+.HelpDetails textarea {
+    width: 90%;
+    height: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: text;
+    user-select: text !important;
+    color: var(--textColor);
+}

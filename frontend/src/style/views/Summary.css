@@ -1,0 +1,8 @@
+.Summary .summaries {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.Summary .ClassifierSummary {
+    background: rgba(128, 128, 128, 0.1);
+}

@@ -1,0 +1,32 @@
+.ConfusionMatrix text {
+    fill: var(--textColor);
+    font-size: 10px;
+    text-anchor: middle;
+}
+
+.ConfusionMatrix .classIndicator {
+    stroke: none;
+}
+
+.ConfusionMatrix .trueClassLabel,
+.ConfusionMatrix .predClassLabel {
+    text-anchor: middle;
+}
+
+.ConfusionMatrix .trueClassLabel {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.ConfusionMatrix .toggleDiagonalBtn {
+    cursor: pointer;
+}
+
+.ConfusionMatrix .toggleDiagonalBtn rect {
+    fill: rgba(128, 128, 128, 0.5);
+}
+
+.ConfusionMatrix .toggleDiagonalBtn line {
+    stroke: var(--accentColor);
+    stroke-width: 2;
+}

@@ -1,0 +1,52 @@
+.Filter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.Filter h2 {
+    color: var(--accentColor);
+}
+
+.Filter ul li {
+    padding: 2px 5px;
+    list-style-type: none;
+    margin: 0 0 2px -15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Filter ul li.selected {
+    background: var(--listItemSelectedBg);
+}
+
+.Filter li.highlighted,
+.Filter li.selected.highlighted {
+    background: var(--accentColor);
+    color: #eee !important;
+}
+
+.Filter table {
+    width: 100%;
+}
+
+.Filter table tr:nth-child(2n){
+    background: var(--tableRowBg);
+}
+
+.Filter table td:first-child {
+    color: var(--accentColor);
+    text-align: right;
+    font-weight: 500;
+}
+
+.Filter table td {
+    padding: 3px;
+}
+
+.Filter input[type=number] {
+    width: 40px;
+    margin-left: 5px;
+}

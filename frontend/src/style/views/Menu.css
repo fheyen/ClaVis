@@ -1,0 +1,137 @@
+.Menu .DataSelection {
+    margin-bottom: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 250px;
+    grid-gap: 32px;
+    justify-items: center;
+}
+
+.Menu .DataSelection > div {
+    width: 100%;
+}
+
+.Menu h1 {
+    color: var(--accentColor);
+    font-size: 32px;
+    text-align: center;
+}
+
+.Menu ul {
+    margin: 0;
+}
+
+.Menu ul li {
+    position: relative;
+    margin: 2px 0;
+    padding: 2px 5px;
+    list-style-type: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Menu ul li.selected {
+    background: var(--listItemSelectedBg);
+}
+
+.Menu ul li:hover,
+.Menu ul li.selected:hover {
+    background: var(--accentColor);
+    color: white;
+}
+
+.Menu .title {
+    font-weight: 500;
+}
+
+.Menu .subtitle {
+    color: #888;
+}
+
+.Menu  ul li:hover .subtitle {
+    color: white;
+}
+
+.Menu .badge {
+    margin-left: 2px;
+    padding: 1px 4px;
+    color: white;
+    border: 1px solid var(--bodyBgColor);
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.Menu .badge.accuracy {
+    margin-left: 20px;
+    background: rgb(4, 100, 4);
+}
+
+.Menu .badge.time {
+    background: #888;
+}
+
+.Menu .badge.classifiers {
+    background: var(--accentColor);
+}
+
+.Menu .badge.projections {
+    background: var(--accentColor2);
+}
+
+.Menu .deleteButton {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    color: #ccc;
+    display: none;
+}
+
+.Menu ul li:hover .deleteButton,
+.Menu ul li.selected:hover .deleteButton {
+    display: inline-block;
+}
+
+.Menu .deleteButton:hover {
+    color: white;
+    background: none;
+}
+
+.Menu input[type=number] {
+    margin: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+.Menu .startButton {
+    height: 50px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    z-index: 100;
+    background: var(--accentColor);
+}
+
+.Menu .startButton.loading {
+    font-size: 14px;
+}
+
+.Menu .startButton:hover {
+    background: var(--startButtonBgHover);
+}
+
+.Menu .actionButtons {
+    display: grid;
+    grid-template-rows: repeat(15, min-content);
+    text-align: center;
+}
+
+.Menu .actionButtons span:not(.first) {
+    margin-top: 15px;
+}

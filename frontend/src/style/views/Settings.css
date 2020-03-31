@@ -1,0 +1,45 @@
+.Settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(128, 128, 128, 0.5);
+    z-index: 10000;
+    text-align: center;
+}
+
+.Settings .content {
+    position: relative;
+    width: 500px;
+    max-height: 80%;
+    overflow: scroll;
+    margin: 5% auto 0 auto;
+    padding: 0 50px 0 50px;
+    background: var(--bodyBgColor);
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.Settings .closeButton,
+.Settings .closeButton:hover {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: 20px;
+}
+
+.Settings h1 {
+    color: var(--accentColor);
+}
+
+.Settings canvas {
+    margin-left: 3px;
+}
+
+.Settings select {
+    width: 500px;
+}
