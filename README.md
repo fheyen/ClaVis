@@ -1,4 +1,4 @@
-# An Interactive Visual Performance Comparison System for Classifiers
+# ClaVis: An Interactive Visual Comparison System for Classifiers
 
 [Here is a short tutorial](./docs/tutorial.md) for the complete setup and usage workflow.
 
