@@ -2,6 +2,9 @@
 
 [Link to the Paper](https://dl.acm.org/doi/10.1145/3399715.3399814)
 
+[Conference slides](./supplementary_material/ClaVis%20Slides%20for%20the%20Conference%20Talk%20at%20AVI.pptx) and more are in the [supplementary material directory](./supplementary_material/).
+
+
 [Here is a short tutorial](./docs/tutorial.md) for the complete setup and usage workflow.
 
 [Here is the full user documentation](./docs/getting_started.md).
